@@ -71,6 +71,14 @@
       <version>7.4</version>
     </dependency>
 
+    <!-- YAML-->
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
     <!--test-->
     <dependency>
       <groupId>io.micronaut.test</groupId>
