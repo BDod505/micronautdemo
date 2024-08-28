@@ -1,0 +1,35 @@
+<configuration>
+
+    <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <pattern>%-4r [%t] %5p %c{1} - %m - X-Transaction-Id=%X{X-Transaction-Id
+                }%n</pattern>
+            <timeZone>UTC</timeZone>
+            <fieldNames>
+                <timestamp>time</timestamp>
+                <message>[ignore]</message>
+                <version>[ignore]</version>
+                <levelValue>[ignore]</levelValue>
+                <thread>[ignore]</thread>
+                <fieldsRequestHeaders>request_headers</fieldsRequestHeaders>
+                <fieldsResponseHeaders>response_headers</fieldsResponseHeaders>
+                <fieldsRequestedUrl>requested_url</fieldsRequestedUrl>
+                <fieldsStatusCode>status_code</fieldsStatusCode>
+                <fieldsMethod>[ignore]</fieldsMethod>
+                <fieldsRemoteHost>remote_host</fieldsRemoteHost>
+                <fieldsHostname>host</fieldsHostname>
+                <fieldsProtocol>[ignore]</fieldsProtocol>
+                <fieldsRequestedUri>[ignore]</fieldsRequestedUri>
+                <fieldsContentLength>[ignore]</fieldsContentLength>
+                <fieldsElapsedTime>duration</fieldsElapsedTime>
+            </fieldNames>
+            <customFields>{"app": "demo"}</customFields>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="JSON_CONSOLE" />
+    </root>
+</configuration>
