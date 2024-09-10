@@ -78,6 +78,13 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!--Security-->
+    <dependency>
+      <groupId>io.micronaut.security</groupId>
+      <artifactId>micronaut-security</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
 
     <!--test-->
     <dependency>

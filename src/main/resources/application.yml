@@ -1,6 +1,13 @@
 #Wed Aug 28 05:21:18 BST 2024
 micronaut:
+  server:
+    port: 1223
   application:
     name: micronautdemo
   metrics:
     enabled: true
+  security:
+    basic-auth:
+      user: ${basic-auth-user}
+      password: ${basic-auth-password}
+
