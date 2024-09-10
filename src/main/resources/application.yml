@@ -4,3 +4,8 @@ micronaut:
     name: micronautdemo
   metrics:
     enabled: true
+  security:
+    authentication: bearer
+    jwt-auth:
+      user: ${jwt-auth-user}
+      password: ${jwt-auth-password}
